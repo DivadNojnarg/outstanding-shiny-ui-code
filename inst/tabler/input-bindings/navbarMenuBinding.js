@@ -27,7 +27,7 @@ $(function() {
     setValue: function(el, value) {
       let hrefVal = '#' + value;
       let menuId = $(el).attr('id');
-      $(`#${menuId} a[href="${hrefVal}"]`).tab('show');
+      $(`#${menuId} a[data-target="${hrefVal}"]`).tab('show');
     },
     receiveMessage: function(el, data) {
       this.setValue(el, data);
